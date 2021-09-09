@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using WebExample.Data;
 
 namespace WebExample
 {
@@ -33,6 +35,10 @@ namespace WebExample
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<WebExampleContext>(options =>
+                options.UseMySql(Configuration.GetConnectionString("WebExampleContext"), builder =>
+                    builder.MigrationsAssembly("WebExample")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
