@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using WebExample.Models;
 
 namespace WebExample.Data
@@ -13,7 +9,8 @@ namespace WebExample.Data
             : base(options)
         {
         }
-
-        public DbSet<WebExample.Models.Product> Product { get; set; }
+        public DbSet<Person> Person { get; set; }
+        public DbSet<SpendsRecord> SpendsRecord { get; set; }
+        public DbSet<Segment> Segments { get; set; }
     }
 }

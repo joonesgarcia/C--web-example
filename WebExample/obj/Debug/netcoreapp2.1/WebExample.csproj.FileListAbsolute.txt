@@ -33,8 +33,4 @@ C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.dll
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.pdb
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.genruntimeconfig.cache
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.csproj.CopyComplete
-C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Products\Create.cshtml.g.cs
-C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Products\Delete.cshtml.g.cs
-C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Products\Details.cshtml.g.cs
-C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Products\Edit.cshtml.g.cs
-C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Products\Index.cshtml.g.cs
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.csproj.AssemblyReference.cache
