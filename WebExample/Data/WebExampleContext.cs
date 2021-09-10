@@ -11,6 +11,6 @@ namespace WebExample.Data
         }
         public DbSet<Person> Person { get; set; }
         public DbSet<SpendsRecord> SpendsRecord { get; set; }
-        public DbSet<Segment> Segments { get; set; }
+        public DbSet<Segment> Segment { get; set; }
     }
 }

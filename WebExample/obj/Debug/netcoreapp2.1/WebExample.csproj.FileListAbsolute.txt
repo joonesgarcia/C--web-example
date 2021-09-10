@@ -16,7 +16,6 @@ C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.RazorAssembl
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.TagHelpers.input.cache
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.TagHelpers.output.cache
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.RazorCoreGenerate.cache
-C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
@@ -33,4 +32,5 @@ C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.dll
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.pdb
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.genruntimeconfig.cache
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.csproj.CopyComplete
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Persons\Index.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.csproj.AssemblyReference.cache

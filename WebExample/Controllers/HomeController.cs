@@ -15,17 +15,10 @@ namespace WebExample.Controllers
             return View();
         }
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "This is a simple web CRUD";
-            ViewData["creator"] = "João Garcia";
-            return View();
-        }
-
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
-
+            ViewData["Creator"] = "João Garcia";
+            ViewData["Description"] = "Full-Stack Developer";
             return View();
         }
 

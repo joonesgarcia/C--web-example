@@ -9,8 +9,8 @@ using WebExample.Data;
 namespace WebExample.Migrations
 {
     [DbContext(typeof(WebExampleContext))]
-    [Migration("20210909182316_Entities")]
-    partial class Entities
+    [Migration("20210909194442_EntitiesUpdate")]
+    partial class EntitiesUpdate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,7 +26,7 @@ namespace WebExample.Migrations
 
                     b.Property<DateTime>("BirthDate");
 
-                    b.Property<int>("Cpf");
+                    b.Property<string>("Cpf");
 
                     b.Property<string>("Name");
 
@@ -46,7 +46,7 @@ namespace WebExample.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Segments");
+                    b.ToTable("Segment");
                 });
 
             modelBuilder.Entity("WebExample.Models.SpendsRecord", b =>

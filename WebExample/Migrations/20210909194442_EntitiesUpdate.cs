@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebExample.Migrations
 {
-    public partial class Entities : Migration
+    public partial class EntitiesUpdate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,7 +14,7 @@ namespace WebExample.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Cpf = table.Column<int>(nullable: false),
+                    Cpf = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Salary = table.Column<double>(nullable: false),
                     BirthDate = table.Column<DateTime>(nullable: false)
@@ -25,7 +25,7 @@ namespace WebExample.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Segments",
+                name: "Segment",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -34,7 +34,7 @@ namespace WebExample.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Segments", x => x.Id);
+                    table.PrimaryKey("PK_Segment", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -59,9 +59,9 @@ namespace WebExample.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_SpendsRecord_Segments_SegmentId",
+                        name: "FK_SpendsRecord_Segment_SegmentId",
                         column: x => x.SegmentId,
-                        principalTable: "Segments",
+                        principalTable: "Segment",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -86,7 +86,7 @@ namespace WebExample.Migrations
                 name: "Person");
 
             migrationBuilder.DropTable(
-                name: "Segments");
+                name: "Segment");
         }
     }
 }

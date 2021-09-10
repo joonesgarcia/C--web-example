@@ -10,6 +10,12 @@
   <ItemGroup>
     <Compile Remove="Migrations\20210908194553_Initial.cs" />
     <Compile Remove="Migrations\20210908194553_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20210909182316_Entities.cs" />
+    <Compile Remove="Migrations\20210909182316_Entities.Designer.cs" />
+    <Compile Remove="Migrations\20210909185315_Entities.cs" />
+    <Compile Remove="Migrations\20210909185315_Entities.Designer.cs" />
+    <Compile Remove="Migrations\20210909190218_Entities.cs" />
+    <Compile Remove="Migrations\20210909190218_Entities.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
