@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Segment>
+
+@{
+    ViewData["Title"] = "Segments";
+
+}
+<h1>
+    @ViewData["Title"]
+</h1>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr class="text-success">
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                Total spend ( $ )
+            </th>
+            <th>
+                Change
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    sad
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Insert" class="btn btn-success">Insert</a>
+</p>
+
+
+

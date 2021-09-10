@@ -33,4 +33,12 @@ C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.pdb
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.genruntimeconfig.cache
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.csproj.CopyComplete
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Persons\Index.cshtml.g.cs
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Persons\Insert.cshtml.g.cs
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Segments\Index.cshtml.g.cs
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Segments\Insert.cshtml.g.cs
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Persons\Delete.cshtml.g.cs
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Segments\Delete.cshtml.g.cs
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\SpendsRecords\Delete.cshtml.g.cs
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\SpendsRecords\Index.cshtml.g.cs
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\SpendsRecords\Insert.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.csproj.AssemblyReference.cache

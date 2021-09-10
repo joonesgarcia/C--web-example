@@ -19,12 +19,13 @@ namespace WebExample.Models
             Id = id;
             Name = name;
         }
-        public double TotalSpends(DateTime initial, DateTime final)
+        public double TotalSpendsDated(DateTime initial, DateTime final)
         {
             return Spends.Where(s => 
                         Name == s.Segment.Name 
                         && s.Date >= initial 
                         && s.Date <= final).Sum(s => s.Amount);
         }
+        public double TotalSpendsGeral() => Spends.Where(s => Id == s.SegmentId).Sum(s => s.Amount);
     }
 }

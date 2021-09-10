@@ -31,11 +31,11 @@ namespace WebExample.Data
             Segment sg2 = new Segment(2, "Educação");
             Segment sg3 = new Segment(3, "Diversão");
 
-            SpendsRecord sr1 = new SpendsRecord(1, new DateTime(2001, 01, 01), 500, Models.Enums.SpendStatus.Cancelled, p1, sg1);
-            SpendsRecord sr2 = new SpendsRecord(2, new DateTime(2002, 01, 01), 200, Models.Enums.SpendStatus.Paid, p4, sg2);
-            SpendsRecord sr3 = new SpendsRecord(3, new DateTime(2002, 09, 01), 50, Models.Enums.SpendStatus.Paid, p3, sg2);
-            SpendsRecord sr4 = new SpendsRecord(4, new DateTime(2003, 05, 10), 75, Models.Enums.SpendStatus.Paid, p2, sg3);
-            SpendsRecord sr5 = new SpendsRecord(5, new DateTime(2003, 09, 01), 20, Models.Enums.SpendStatus.Pending, p1, sg3);
+            SpendsRecord sr1 = new SpendsRecord(1, "Mc Donalds", new DateTime(2001, 01, 01), 50, Models.Enums.SpendStatus.Cancelled, p1, sg1);
+            SpendsRecord sr2 = new SpendsRecord(2, "Curso Ingles", new DateTime(2002, 01, 01), 200, Models.Enums.SpendStatus.Paid, p4, sg2);
+            SpendsRecord sr3 = new SpendsRecord(3, "Mini curso de Java", new DateTime(2002, 09, 01), 50, Models.Enums.SpendStatus.Paid, p3, sg2);
+            SpendsRecord sr4 = new SpendsRecord(4, "Cinema", new DateTime(2003, 05, 10), 75, Models.Enums.SpendStatus.Paid, p2, sg3);
+            SpendsRecord sr5 = new SpendsRecord(5, "Carrinho de controle remoto", new DateTime(2003, 09, 01), 20, Models.Enums.SpendStatus.Pending, p1, sg3);
 
             _context.Person.AddRange(p1, p2, p3, p4);
             _context.Segment.AddRange(sg1, sg2, sg3);
