@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebExample.Data;
 
 namespace WebExample.Migrations
 {
     [DbContext(typeof(WebExampleContext))]
-    partial class WebExampleContextModelSnapshot : ModelSnapshot
+    [Migration("20210911145406_EntitesNewUpdate")]
+    partial class EntitesNewUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

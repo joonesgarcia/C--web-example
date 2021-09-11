@@ -39,7 +39,7 @@
         {
         <tr>
             <td>
-                @Html.DisplayFor(model => item.Segment.Name)
+                fix @Html.DisplayFor(model => item.Segment.Name)
             </td>
             <td>
                 @Html.DisplayFor(model => item.Name)
@@ -48,7 +48,7 @@
                 @Html.DisplayFor(model => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(model => item.Person)
+                fix @Html.DisplayFor(model => item.Person)
             </td>
             <td>
                R$ @Html.DisplayFor(model => item.Amount)
@@ -57,7 +57,7 @@
                 @Html.DisplayFor(model => item.Status)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <!-- a asp-action="Edit" asp-route-id="item.Id">Edit</!--a --> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>

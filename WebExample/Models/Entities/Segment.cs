@@ -9,7 +9,6 @@ namespace WebExample.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public double TotalSpend { get; set; }
-
         public ICollection<SpendsRecord> Spends { get; set; } = new List<SpendsRecord>();
 
         public Segment()

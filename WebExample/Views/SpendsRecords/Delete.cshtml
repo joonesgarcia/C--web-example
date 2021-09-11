@@ -1,11 +1,11 @@
-﻿@model Segment
+﻿@model SpendsRecord
 
 @{
     ViewData["Title"] = "Deleting...";
 }
 <h2>@ViewData["Title"]</h2>
 
-<h3>You really want to delete this Segment?</h3>
+<h3>You really want to delete this Spend?</h3>
 
 <div>
     <h4>Infos</h4>
@@ -13,12 +13,35 @@
 
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.Segment)
+        </dt>
+        <dd>
+            fix @Html.DisplayFor(model => model.Segment.Name)
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
         <dt>
+            @Html.DisplayNameFor(model => model.Person)
+        </dt>
+        <dd>
+            fix @Html.DisplayFor(model => model.Person)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
     </dl>
 
     <form asp-action="Delete">

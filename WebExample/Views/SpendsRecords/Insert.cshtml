@@ -1,4 +1,4 @@
-﻿@model WebExample.Models.Segment;
+﻿@model WebExample.Models.ViewModel.DropFormViewModel;
 @{
     ViewData["Title"] = "Insert infos above";
 }
@@ -7,20 +7,40 @@
 <h4>@ViewData["Title"]</h4>
 
 <hr />
- <div class="row">
-     <div class="col-md4">
-         <form asp-action="Insert">
-             <div class="form-group">
-                 <label asp-for="Name" class="control-label"></label>
-                 <input asp-for="Name" class="form-control" />
-             </div>
-             <div class="form-group">
-                 <input type="submit" value="Insert" class="btn btn-success" />
-             </div>
-         </form>
-     </div>
-
-
-
-
- </div>
+<div class="row">
+    <div class="col-md4">
+        <form asp-action="Insert">
+            <div class="form-group">
+                <label asp-for="Spend.SegmentId" class="control-label"></label>
+                <select asp-for="Spend.SegmentId" asp-items="@(new SelectList(Model.Segments,"Id", "Name"))" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Spend.Name" class="control-label"></label>
+                <input asp-for="Spend.Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Spend.Date" class="control-label"></label>
+                <input asp-for="Spend.Date" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Spend.PersonId" class="control-label"></label>
+                <select asp-for="Spend.PersonId" asp-items="@(new SelectList(Model.Persons,"Id", "Name"))" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Spend.Amount" class="control-label"></label>
+                <input asp-for="Spend.Amount" class="form-control" />
+            </div>
+            <div class="form-group">
+                fix
+                <!--label asp-for="Spend.Status" class="control-label"></!--label>
+                {
+                    //ViewData["as"] = Html.GetEnumSelectList<SpendsRecord>(model => Model.Status);
+                }
+                <select-- asp-for="Model.Status" asp-items="Html.GetEnumSelectList<SpendsRecord>()" class="form-control"></select-->
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Insert" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>

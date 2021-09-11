@@ -6,12 +6,11 @@ namespace WebExample.Controllers
 {
     public class SegmentsController : Controller
     {
-
         private readonly SegmentService _segmentService; //dependency with SegmentService
 
         public SegmentsController(SegmentService segmentService) => _segmentService = segmentService;
         
-        public IActionResult Index() //uses a service to get persons List<> and redirects it to index view
+        public IActionResult Index() //uses a service to get persons List<> and redirects it to index view with segment spends updated
         {
             foreach (Segment p in _segmentService.FindAll()) p.TotalSpendsUpdate();
             return View(_segmentService.FindAll());

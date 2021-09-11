@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebExample.Models;
 using WebExample.Services;
+using WebExample.Models.ViewModel;
+
 
 namespace WebExample.Controllers
 {
@@ -8,16 +10,29 @@ namespace WebExample.Controllers
     {
 
         private readonly SpendsRecordsService _spendsRecordsService; //dependency with SpendsRecordsService
+        
+        private readonly SegmentService _segmentService; //dependency with SpendsRecordsService
+        private readonly PersonService _personService; //dependency with SpendsRecordsService
 
-        public SpendsRecordsController(SpendsRecordsService spendsRecordsService) => _spendsRecordsService = spendsRecordsService;
+        public SpendsRecordsController(SpendsRecordsService spendsRecordsService, SegmentService segmentService, PersonService personService)
+        {
+            _spendsRecordsService = spendsRecordsService;
+            _segmentService = segmentService;
+            _personService = personService;
 
+        }
         public IActionResult Index() //uses a service to get SpendsRecords List<> and redirects it to index view
         {
             return View(_spendsRecordsService.FindAll());
         }
-        public IActionResult Insert() /// redirects to insert view
+        public IActionResult Insert() /// redirects to insert  with person and segment view models
         {
-            return View();
+            var segments = _segmentService.FindAll();
+            var persons = _personService.FindAll();
+
+            var dropViewModel = new DropFormViewModel { Persons = persons , Segments = segments};
+
+            return View(dropViewModel);
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]

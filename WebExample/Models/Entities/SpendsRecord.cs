@@ -14,6 +14,8 @@ namespace WebExample.Models
         public Person Person { get; set; }
         public Segment Segment { get; set; }
         public int SegmentId { get; set; }
+        public int PersonId { get; set; }
+
 
         public SpendsRecord()
         {

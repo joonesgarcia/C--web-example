@@ -19,13 +19,11 @@ namespace WebExample.Services
         {
             return _context.Person.FirstOrDefault(item => item.Id == id);
         }
-
         public void Insert(Person p) // uses context to insert a Person
         {
             _context.Add(p);
             _context.SaveChanges();
         }
-
         public void Delete(int id) // uses context to delete a Person
         {
             var p = _context.Person.Find(id);
