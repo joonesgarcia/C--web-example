@@ -2,7 +2,7 @@
 using WebExample.Models;
 using WebExample.Services;
 using WebExample.Models.ViewModel;
-
+using WebExample.Models.Enums;
 
 namespace WebExample.Controllers
 {
@@ -19,9 +19,9 @@ namespace WebExample.Controllers
             _spendsRecordsService = spendsRecordsService;
             _segmentService = segmentService;
             _personService = personService;
-
         }
-        public IActionResult Index() //uses a service to get SpendsRecords List<> and redirects it to index view
+
+        public IActionResult Index() 
         {
             return View(_spendsRecordsService.FindAll());
         }
@@ -39,24 +39,6 @@ namespace WebExample.Controllers
         public IActionResult Insert(SpendsRecord s) // uses a service to insert a SpendsRecords to db and redirects to index view
         {
             _spendsRecordsService.Insert(s);
-            return RedirectToAction(nameof(Index));
-        }
-
-        public IActionResult Delete(int? id) // redirects to delete view
-        {
-            if (id == null) return NotFound();
-
-            var p = _spendsRecordsService.FindById(id.Value);
-
-            if (p == null) return NotFound();
-
-            return View(p);
-        }
-        [HttpPost]
-        [AutoValidateAntiforgeryToken]
-        public IActionResult Delete(SpendsRecord s) // uses a service to insert a segment to db and redirects to index view
-        {
-            _spendsRecordsService.Delete(s);
             return RedirectToAction(nameof(Index));
         }
 

@@ -2,6 +2,8 @@
 using System.Linq;
 using WebExample.Data;
 using WebExample.Models;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace WebExample.Services
 {
@@ -11,9 +13,8 @@ namespace WebExample.Services
 
         public SpendsRecordsService(WebExampleContext context) => _context = context; //constructor
 
-        public List<SpendsRecord> FindAll() => _context.SpendsRecord.ToList(); // uses context to return a List<> of SpendsRecord
-
-        public SpendsRecord FindById(int id) => _context.SpendsRecord.FirstOrDefault(item => item.Id == id); // uses context to return a SpendsRecord by Id
+        public List<SpendsRecord> FindAll() => _context.SpendsRecord.Include(obj => obj.Segment).ToList(); // uses context to return a List<> of (SpendsRecord join Segment)
+        public SpendsRecord FindById(int id) => _context.SpendsRecord.Include(obj => obj.Segment).FirstOrDefault(item => item.Id == id); // uses context to return (SpendsRecord join Segment) by Id
 
         public void Insert(SpendsRecord s) // uses context to add a SpendsRecord
         {

@@ -3,7 +3,8 @@
     ViewData["Title"] = "Insert infos above";
 }
 
-<h1> New Segment </h1>
+
+<h1> New Spend </h1>
 <h4>@ViewData["Title"]</h4>
 
 <hr />
@@ -31,12 +32,17 @@
                 <input asp-for="Spend.Amount" class="form-control" />
             </div>
             <div class="form-group">
-                fix
-                <!--label asp-for="Spend.Status" class="control-label"></!--label>
-                {
-                    //ViewData["as"] = Html.GetEnumSelectList<SpendsRecord>(model => Model.Status);
-                }
-                <select-- asp-for="Model.Status" asp-items="Html.GetEnumSelectList<SpendsRecord>()" class="form-control"></select-->
+                <label asp-for="Spend.Status" class="control-label">Select spend status</label>
+                <!--select asp-for="Spend.Status" 
+                        asp-items="Html.GetEnumSelectList<>()"></!--select->
+                
+                    
+                    <!--option value="0">Pending</!--option>
+                <option value="1">Paid</option>
+                <option value="2">Cancelled</option>
+                </select>
+                <!-- ~AsHtml.EnumDropDownListFor(model => model.Status, "Select Status"); 
+                <!--select asp-for=" Spend.PersonId" asp-items="(new SelectList(Model.Status.ToList()," Id", "Name" ))" class="form-control" -->
             </div>
             <div class="form-group">
                 <input type="submit" value="Insert" class="btn btn-success" />
