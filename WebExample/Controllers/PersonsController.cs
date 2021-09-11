@@ -12,6 +12,7 @@ namespace WebExample.Controllers
 
         public IActionResult Index() //uses a service to get persons List<> and passes it to index view
         {
+            foreach (Person p in _personService.FindAll()) p.TotalSpendsUpdate();
             return View(_personService.FindAll());
         }
         public IActionResult Insert() //redirects to insert view

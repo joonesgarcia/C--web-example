@@ -22,14 +22,14 @@ namespace WebExample.Data
             {
                 return;
             }
-            Person p1 = new Person(1, "45309235841", "Joao Garcia", 2300, new DateTime(1998, 01, 30));
-            Person p2 = new Person(2, "12332123454", "Felipe Diaz", 800, new DateTime(1990, 09, 30));
-            Person p3 = new Person(3, "98337465382", "Amanda Santos Silva", 1000, new DateTime(1970, 11, 30));
-            Person p4 = new Person(4, "22346578643", "Fernando de Moraes Filho", 400, new DateTime(1982, 06, 30));
+            Person p1 = new Person(1, "45309235841", "Joao Garcia", 2300, new DateTime(1998, 01, 30), 0);
+            Person p2 = new Person(2, "12332123454", "Felipe Diaz", 800, new DateTime(1990, 09, 30), 0);
+            Person p3 = new Person(3, "98337465382", "Amanda Santos Silva", 1000, new DateTime(1970, 11, 30), 0);
+            Person p4 = new Person(4, "22346578643", "Fernando de Moraes Filho", 400, new DateTime(1982, 06, 30), 0);
 
-            Segment sg1 = new Segment(1, "Alimentação");  
-            Segment sg2 = new Segment(2, "Educação");
-            Segment sg3 = new Segment(3, "Diversão");
+            Segment sg1 = new Segment(1, "Alimentação", 0);  
+            Segment sg2 = new Segment(2, "Educação", 0);
+            Segment sg3 = new Segment(3, "Diversão", 0);
 
             SpendsRecord sr1 = new SpendsRecord(1, "Mc Donalds", new DateTime(2001, 01, 01), 50, Models.Enums.SpendStatus.Cancelled, p1, sg1);
             SpendsRecord sr2 = new SpendsRecord(2, "Curso Ingles", new DateTime(2002, 01, 01), 200, Models.Enums.SpendStatus.Paid, p4, sg2);
