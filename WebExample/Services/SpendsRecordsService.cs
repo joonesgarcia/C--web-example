@@ -13,8 +13,8 @@ namespace WebExample.Services
 
         public SpendsRecordsService(WebExampleContext context) => _context = context; //constructor
 
-        public List<SpendsRecord> FindAll() => _context.SpendsRecord.Include(obj => obj.Segment).ToList(); // uses context to return a List<> of (SpendsRecord join Segment)
-        public SpendsRecord FindById(int id) => _context.SpendsRecord.Include(obj => obj.Segment).FirstOrDefault(item => item.Id == id); // uses context to return (SpendsRecord join Segment) by Id
+        public List<SpendsRecord> FindAll() => _context.SpendsRecord.Include(ob => ob.Segment).Include(obj => obj.Person).ToList(); // uses context to return a List<> of (SpendsRecord join Segment)
+        public SpendsRecord FindById(int id) => _context.SpendsRecord.Include(obj => obj.Segment).Include(obj => obj.Person).FirstOrDefault(item => item.Id == id); // uses context to return (SpendsRecord join Segment) by Id
 
         public void Insert(SpendsRecord s) // uses context to add a SpendsRecord
         {

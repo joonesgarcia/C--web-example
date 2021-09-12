@@ -38,7 +38,7 @@
         @foreach (var item in Model)
         {
         <tr>
-            <td> <!-- This works because I made a join in SpendsRecordService, but Person's name isnt working'-->
+            <td> 
                 @Html.DisplayFor(model => item.Segment.Name) 
             </td>
             <td>
@@ -48,9 +48,7 @@
                 @Html.DisplayFor(model => item.Date)
             </td>
             <td>
-                <!--fix Html.DisplayFor(model => Model.Where(x => x.SegmentId == item.Id).Sum(s => s.Amount)) -->
                 @Html.DisplayFor(model => item.Person.Name)
-
             </td>
             <td>
                R$ @Html.DisplayFor(model => item.Amount)
