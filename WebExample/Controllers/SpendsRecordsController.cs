@@ -36,9 +36,9 @@ namespace WebExample.Controllers
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
-        public IActionResult Insert(SpendsRecord s) // uses a service to insert a SpendsRecords to db and redirects to index view
+        public IActionResult Insert(DropFormViewModel s) // uses a service to insert a SpendsRecords to db and redirects to index view
         {
-            _spendsRecordsService.Insert(s);
+            _spendsRecordsService.Insert(s.Spend);
             return RedirectToAction(nameof(Index));
         }
 

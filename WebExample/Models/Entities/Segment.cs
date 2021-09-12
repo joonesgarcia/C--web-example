@@ -13,6 +13,8 @@ namespace WebExample.Models
         [Display(Name = "Total Spends")]
         [DisplayFormat(DataFormatString = "{0:F2}")]
         public double TotalSpend { get; set; }
+
+        //association
         public ICollection<SpendsRecord> Spends { get; set; } = new List<SpendsRecord>();
 
         public Segment()

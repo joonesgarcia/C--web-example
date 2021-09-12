@@ -16,6 +16,8 @@ namespace WebExample.Models
         public SpendStatus Status { get; set; }
         public Person Person { get; set; }
         public Segment Segment { get; set; }
+
+        //associations
         public int SegmentId { get; set; }
         public int PersonId { get; set; }
 

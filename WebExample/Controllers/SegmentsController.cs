@@ -12,7 +12,11 @@ namespace WebExample.Controllers
         
         public IActionResult Index() //uses a service to get persons List<> and redirects it to index view with segment spends updated
         {
-            foreach (Segment p in _segmentService.FindAll()) p.TotalSpendsUpdate(); // not working
+            foreach (Segment p in _segmentService.FindAll())
+            {
+                p.TotalSpendsUpdate(); // not working
+                _segmentService.UpdateTotalSpend(p);
+            }
             return View(_segmentService.FindAll());
         }
         public IActionResult Insert() /// redirects to insert view

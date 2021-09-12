@@ -2,6 +2,7 @@
 using System.Linq;
 using WebExample.Data;
 using WebExample.Models;
+using WebExample.Services;
 
 namespace WebExample.Services
 {
@@ -24,6 +25,12 @@ namespace WebExample.Services
         {
             _context.Remove(s);
             _context.SaveChanges();
+        }
+        public void UpdateTotalSpend(Segment s)
+        {
+            _context.Update(s);
+            _context.SaveChanges();
+
         }
     }
 }

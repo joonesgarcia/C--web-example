@@ -22,7 +22,8 @@ namespace WebExample.Services
         }
         public void Insert(Person p) // uses context to insert a Person
         {
-            _context.Add(p);
+            //_context.Add(p);
+            _context.Person.Add(p);
             _context.SaveChanges();
         }
         public void Delete(int id) // uses context to delete a Person

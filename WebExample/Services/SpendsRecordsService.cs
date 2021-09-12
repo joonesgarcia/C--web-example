@@ -18,7 +18,8 @@ namespace WebExample.Services
 
         public void Insert(SpendsRecord s) // uses context to add a SpendsRecord
         {
-            _context.Add(s);
+            // _context.Add(s);
+            _context.SpendsRecord.Add(s);
             _context.SaveChanges();
         }
         public void Delete(SpendsRecord s) // uses context to delete a SpendsRecord
