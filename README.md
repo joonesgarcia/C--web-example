@@ -19,16 +19,16 @@ This project controls Spends from diferents Persons, separeted by Segments, like
 
 Some of the pages..
 
-### Views 
-![SpendsRecord Index](IM_exc/IMG_SR_INDEX.png)
+### View
+![SpendsRecord Index](WebExample/IM_exc/IMG_SR_INDEX.png)
 
 ### Insert
-![SpendsRecord Insert](IM_exc/IMG_SR_INSERT.png)
+![SpendsRecord Insert](WebExample/IM_exc/IMG_SR_INSERT.png)
 
 ### Delete confirmation
-![Confirm Deletion](IM_exc/IMG_DEL.png)
+![Confirm Deletion](WebExample/IM_exc/IMG_DEL.png)
 
 ### Edit
-![Editing](IM_exc/IMG_P_EDIT.png)
+![Editing](WebExample/IM_exc/IMG_P_EDIT.png)
 
 #### By João Garcia
