@@ -2,7 +2,7 @@
 using WebExample.Services;
 using WebExample.Models;
 using WebExample.Models.ViewModel;
-
+using WebExample.Services.Exceptions;
 
 namespace WebExample.Controllers
 {
@@ -48,6 +48,35 @@ namespace WebExample.Controllers
         {
             _personService.Delete(id);
             return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Edit(int? id)  // returns pretended obj to be reviewed at edit view
+        {
+            if (id == null) return NotFound();
+
+            var obj = _personService.FindById(id.Value);
+
+            if (obj == null) return NotFound();
+
+            return View(obj);               
+        }
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+        public IActionResult Edit(int id, Person p)
+        {
+            if (id != p.Id) return BadRequest();
+            try
+            {
+                _personService.Update(p);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (NotFoundException)
+            {
+                return NotFound();
+            }
+            catch (DbConcurrencyException)
+            {
+                return BadRequest();
+            }
         }
     }
 }

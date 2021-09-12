@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebExample.Models;
 using WebExample.Services;
+using WebExample.Services.Exceptions;
 
 namespace WebExample.Controllers
 {
@@ -47,6 +48,35 @@ namespace WebExample.Controllers
         {
             _segmentService.Delete(s);
             return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Edit(int? id)  // returns pretended obj to be reviewed at edit view
+        {
+            if (id == null) return NotFound();
+
+            var obj = _segmentService.FindById(id.Value);
+
+            if (obj == null) return NotFound();
+
+            return View(obj);
+        }
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+        public IActionResult Edit(int id, Segment s)
+        {
+            if (id != s.Id) return BadRequest();
+            try
+            {
+                _segmentService.Update(s);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (NotFoundException)
+            {
+                return NotFound();
+            }
+            catch (DbConcurrencyException)
+            {
+                return BadRequest();
+            }
         }
 
     }

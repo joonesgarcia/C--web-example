@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Linq;
 using WebExample.Data;
 using WebExample.Models;
 using WebExample.Services;
+using WebExample.Services.Exceptions;
 
 namespace WebExample.Services
 {
@@ -31,6 +33,21 @@ namespace WebExample.Services
             _context.Update(s);
             _context.SaveChanges();
 
+        }
+        public void Update(Segment s)
+        {
+            if (!_context.Segment.Any(x => x.Id == s.Id))
+            {
+                throw new NotFoundException("Id not found");
+            }
+            try
+            {
+                _context.Update(s);
+                _context.SaveChanges();
+            }catch (DbUpdateConcurrencyException e) //intercepts a (data-access) layer exception and throws other one at (service) layer
+            {
+                throw new DbConcurrencyException(e.Message);
+            }
         }
     }
 }

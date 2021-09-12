@@ -1,15 +1,16 @@
 ﻿@model WebExample.Models.ViewModel.DropFormViewModel;
 @{
-    ViewData["Title"] = "Insert infos above";
+    ViewData["Title"] = "Edit infos above";
 }
 
-<h1> New Spend </h1>
+<h1> Edit Spend </h1>
 <h4>@ViewData["Title"]</h4>
 
 <hr />
 <div class="row">
     <div class="col-md4">
-        <form asp-action="Insert">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="Spend.Id" />
             <div class="form-group">
                 <label asp-for="Spend.SegmentId" class="control-label"></label>
                 <select asp-for="Spend.SegmentId" asp-items="@(new SelectList(Model.Segments,"Id", "Name"))" class="form-control"></select>
@@ -18,7 +19,7 @@
                 <label asp-for="Spend.Name" class="control-label"></label>
                 <input asp-for="Spend.Name" class="form-control" />
             </div>
-            
+
             <div class="form-group">
                 <label asp-for="Spend.Date" class="control-label"></label>
                 <input asp-for="Spend.Date" class="form-control" />
@@ -34,13 +35,14 @@
             <div class="form-group">
                 <label asp-for="Spend.Status" class="control-label">Select spend status</label>
                 <select asp-for="Spend.Status" class="form-control">
+
                     <option value="0">Pending</option>
                     <option value="1">Paid</option>
                     <option value="2">Cancelled</option>
                 </select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Insert" class="btn btn-success" />
+                <input type="submit" value="Save" class="btn btn-success" />
             </div>
         </form>
     </div>

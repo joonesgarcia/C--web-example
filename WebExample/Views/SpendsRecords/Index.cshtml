@@ -28,9 +28,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Status)
             </th>
-            <!---th>
+            <th>
                 Change
-            </!--th-->
+            </th>
         </tr>
     </thead>
 
@@ -56,9 +56,9 @@
             <td>
                 @Html.DisplayFor(model => item.Status)
             </td>
-            <!--td> need a view and controller method
-                <a asp-action="Edit" asp-route-id="item.Id">Edit</!--a> 
-            </!td-->
+            <td> 
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+            </td>
         </tr>
         }
     </tbody>

@@ -2,6 +2,7 @@
 using System.Linq;
 using WebExample.Data;
 using WebExample.Models;
+using WebExample.Services.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebExample.Services
@@ -31,6 +32,22 @@ namespace WebExample.Services
             var p = _context.Person.Find(id);
             _context.Remove(p);
             _context.SaveChanges();
+        }
+        public void Update(Person p)
+        {
+            if (!_context.Person.Any(x => x.Id == p.Id))
+            {
+                throw new NotFoundException("Id not found");
+            }
+            try
+            {
+                _context.Update(p);
+                _context.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException e) //intercepts a (data-access) layer exception and throws other one at (service) layer
+            {
+                throw new DbConcurrencyException(e.Message);
+            }
         }
     }
 }

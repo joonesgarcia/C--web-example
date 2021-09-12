@@ -42,3 +42,6 @@ C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\SpendsRecor
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\SpendsRecords\Index.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\SpendsRecords\Insert.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.csproj.AssemblyReference.cache
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Persons\Edit.cshtml.g.cs
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Segments\Edit.cshtml.g.cs
+C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\SpendsRecords\Edit.cshtml.g.cs

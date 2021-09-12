@@ -3,6 +3,7 @@ using WebExample.Models;
 using WebExample.Services;
 using WebExample.Models.ViewModel;
 using WebExample.Models.Enums;
+using WebExample.Services.Exceptions;
 
 namespace WebExample.Controllers
 {
@@ -40,6 +41,40 @@ namespace WebExample.Controllers
         {
             _spendsRecordsService.Insert(s.Spend);
             return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Edit(int? id)  // returns pretended obj to be reviewed at edit view
+        {
+            if (id == null) return NotFound();
+
+            var obj = _spendsRecordsService.FindById(id.Value);
+
+            var segments = _segmentService.FindAll();
+            var persons = _personService.FindAll();
+
+            if (obj == null) return NotFound();
+
+            var dropViewModel = new DropFormViewModel { Persons = persons, Segments = segments , Spend = obj};
+
+            return View(dropViewModel);
+        }
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+        public IActionResult Edit(int id, DropFormViewModel df)
+        {
+            if (id != df.Spend.Id) return BadRequest();
+            try
+            {
+                _spendsRecordsService.Update(df.Spend);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (NotFoundException)
+            {
+                return NotFound();
+            }
+            catch (DbConcurrencyException)
+            {
+                return BadRequest();
+            }
         }
 
     }
