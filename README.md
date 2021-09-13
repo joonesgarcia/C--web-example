@@ -21,7 +21,9 @@ This project controls Spends from diferents Persons, separeted by Segments, like
 Some of the pages..
 
 ### View
-![SpendsRecord Index](WebExample/IM_exc/IMG_SR_INDEX.png)
+![SpendsRecords Index](WebExample/IM_exc/IMG_SR_INDEX.png)
+![Segments Index](WebExample/IM_exc/IMG_S_INDEX.png)
+![Persons Index](WebExample/IM_exc/IMG_P_INDEX.png)
 
 ### Insert
 ![SpendsRecord Insert](WebExample/IM_exc/IMG_SR_INSERT.png)
