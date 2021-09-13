@@ -28,12 +28,6 @@ namespace WebExample.Services
             _context.Remove(s);
             _context.SaveChanges();
         }
-        public void UpdateTotalSpend(Segment s)
-        {
-            _context.Update(s);
-            _context.SaveChanges();
-
-        }
         public void Update(Segment s)
         {
             if (!_context.Segment.Any(x => x.Id == s.Id))

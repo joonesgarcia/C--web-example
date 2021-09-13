@@ -8,15 +8,20 @@ namespace WebExample.Controllers
     public class SegmentsController : Controller
     {
         private readonly SegmentService _segmentService; //dependency with SegmentService
+        private readonly SpendsRecordsService _spendsRecordsService; //dependency with SegmentService
 
-        public SegmentsController(SegmentService segmentService) => _segmentService = segmentService;
+        public SegmentsController(SegmentService segmentService, SpendsRecordsService spendsRecordsService)
+        {
+            _segmentService = segmentService;
+            _spendsRecordsService = spendsRecordsService;
+        }
         
         public IActionResult Index() //uses a service to get persons List<> and redirects it to index view with segment spends updated
         {
             foreach (Segment p in _segmentService.FindAll())
             {
-                p.TotalSpendsUpdate(); // not working
-                _segmentService.UpdateTotalSpend(p);
+                p.Spends = _spendsRecordsService.FindAll();
+                p.TotalSpendsUpdate(); 
             }
             return View(_segmentService.FindAll());
         }

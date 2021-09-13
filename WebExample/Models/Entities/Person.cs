@@ -39,7 +39,7 @@ namespace WebExample.Models
         public void AddSpend(SpendsRecord spend) => Spends.Add(spend);
         public void RemoveSpend(SpendsRecord spend) => Spends.Remove(spend);
         public double TotalSpends(DateTime initial, DateTime final) => Spends.Where(s => s.Date >= initial && s.Date <= final).Sum(s => s.Amount);
-        public double TotalSpendsUpdate() => TotalSpend = Spends.Where(s => this == s.Person).Sum(s => s.Amount);
+        public double TotalSpendsUpdate() => TotalSpend = Spends.Where(s => Id == s.PersonId).Sum(s => s.Amount);
 
     }
 }

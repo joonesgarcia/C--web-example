@@ -9,13 +9,20 @@ namespace WebExample.Controllers
     public class PersonsController : Controller
     {
         private readonly PersonService _personService; //dependency with PersonService
+        private readonly SpendsRecordsService _spendsRecordsService; //dependency with PersonService
 
-        public PersonsController(PersonService personService) =>_personService = personService;
+
+        public PersonsController(PersonService personService, SpendsRecordsService spendsRecordsService)
+        {
+            _personService = personService;
+            _spendsRecordsService = spendsRecordsService;
+        }
         
         public IActionResult Index() //uses a service to get persons List<> and passes it to index view with persons spends updated
         {
             foreach (Person p in _personService.FindAll()) 
             {
+                p.Spends = _spendsRecordsService.FindAll();
                 p.TotalSpendsUpdate();
             }
             return View(_personService.FindAll());
