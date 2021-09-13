@@ -15,7 +15,7 @@ This project controls Spends from diferents Persons, separeted by Segments, like
 * The entities are : Persons, Segments and SpendRecords.
 * Each entities has it owns atributes.
 * You can edit or remove any of pre-seeded data, as well as add any of your interest.
-* All data manipulated via View are saved to you DB, in respective table.
+* All data manipulated in Views are saved to you DB, in respective table.
 
 Some of the pages..
 
