@@ -17,8 +17,6 @@ C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.TagHelpers.i
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.TagHelpers.output.cache
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.RazorCoreGenerate.cache
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
-C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -38,7 +36,6 @@ C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Segments\In
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Segments\Insert.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Persons\Delete.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\Segments\Delete.cshtml.g.cs
-C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\SpendsRecords\Delete.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\SpendsRecords\Index.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\Razor\Views\SpendsRecords\Insert.cshtml.g.cs
 C:\temp\VB\WebExample\WebExample\obj\Debug\netcoreapp2.1\WebExample.csproj.AssemblyReference.cache
